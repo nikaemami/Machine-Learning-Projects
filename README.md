@@ -29,51 +29,55 @@ The probability distribution implied by this undirected graph is: p(x1, ..., x5)
 
 4. **Marginal Computation**:
    - Calculate the pairwise marginal probability distributions for each pair of variables based on the messages obtained from the previous steps. This involves combining the messages to determine the probability distribution over the binary variables.
-  
-##  2- Polynomial Regression Models
-In this project, we evaluated polynomial regression models with degrees ranging from 1 to 10. We calculated training errors for each polynomial degree and plotted these results to visualize performance. To ensure robustness, we implemented 2-fold cross-validation by shuffling the data, splitting it into training and testing sets, and computing testing errors for each degree. The best model was selected based on the polynomial degree that achieved the lowest testing error.
 
 
-We observe how increasing the degree impacts the model's performanc. We can see the change in risk when moving from a polynomial degree of 3 to 4:
+## 2- Reconstructing Images Using PCA
+
+In this project, we work with a dataset called "teapots.mat," which contains 100 images of teapots with dimensions 38x50 pixels. We compute the data mean and the top 3 eigenvectors of the covariance matrix of the data and display them as images as below:
 
 
-For D = 3:
+Initial image:
 
 
-<img src="images/2.png" width="400"/>
+<img src="images/9.png" width="400"/>
 
 
-For D = 4:
+First 3 eigenvectors:
 
 
-<img src="images/3.png" width="400"/>
-
-## 3- Regularized Linear Regression
-
-In this project, we implement ridge regression using two methods:
-
-1. **Direct Computation**: We calculate the model parameters using the closed-form solution and assess training and testing errors.
-2. **Gradient Descent**: We optimize model parameters through gradient descent and evaluate training and testing errors.
-
-**Regularization Parameter (λ) Analysis**:
-
-- We analyze the effect of various λ values on training and testing errors.
+<img src="images/10.png" width="400"/>
 
 
-For the firat function, after iterating for different values of Lambda, we calculate the train and test loss for each, and plot the risk regarding to Lambda:
+Next, we reconstruct the images using Principal Component Analysis (PCA) with the least squares error, utilizing only the mean and a linear combination of the top 3 eigenvectors.
+Here is an example of an image before and after the PCA-based reconstruction:
 
 
-<img src="images/4.png" width="400"/>
+<img src="images/11.png" width="400"/>
 
 
-We do the same thing for the second function:
+## 3- Object Recognition Using Support Vector Machine (SVM)
+
+In this project, the task is to build a Support Vector Machine (SVM) to classify data and use cross-validation to find the best SVM kernel and regularization value. We experiment with different polynomial orders (1 to 5), RBF kernels with varying sigma values, and different values of the regularization parameter C in the SVM.
+
+We can see the errors for 3 different kernels as below:
 
 
-<img src="images/5-2.png" width="400"/>
+Linear kernel:
 
 
-After visualizing the models, we see that we get the same results. The train error decreases and the test error increases as the value of Lambda decreases.
+<img src="images/linear.png" width="400"/>
 
+
+Polynomial kernel:
+
+
+<img src="images/polynomial.png" width="400"/>
+
+
+RBF kernel:
+
+
+<img src="images/rbf.png" width="400"/>
 
 ## 4- Logistic Regression for Binary Classification
 
@@ -100,27 +104,49 @@ Displaying the evolution of binary classification error and perceptron error ove
 We also analyze how the convergence behavior changes as you vary the step size η.
 
 
-## 6- Object Recognition Using Support Vector Machine (SVM)
-
-In this project, the task is to build a Support Vector Machine (SVM) to classify data and use cross-validation to find the best SVM kernel and regularization value. We experiment with different polynomial orders (1 to 5), RBF kernels with varying sigma values, and different values of the regularization parameter C in the SVM.
-
-We can see the errors for 3 different kernels as below:
+##  6- Polynomial Regression Models
+In this project, we evaluated polynomial regression models with degrees ranging from 1 to 10. We calculated training errors for each polynomial degree and plotted these results to visualize performance. To ensure robustness, we implemented 2-fold cross-validation by shuffling the data, splitting it into training and testing sets, and computing testing errors for each degree. The best model was selected based on the polynomial degree that achieved the lowest testing error.
 
 
-Linear kernel:
+We observe how increasing the degree impacts the model's performanc. We can see the change in risk when moving from a polynomial degree of 3 to 4:
 
 
-<img src="images/linear.png" width="400"/>
+For D = 3:
 
 
-Polynomial kernel:
+<img src="images/2.png" width="400"/>
 
 
-<img src="images/polynomial.png" width="400"/>
+For D = 4:
 
 
-RBF kernel:
+<img src="images/3.png" width="400"/>
+
+## 7- Regularized Linear Regression
+
+In this project, we implement ridge regression using two methods:
+
+1. **Direct Computation**: We calculate the model parameters using the closed-form solution and assess training and testing errors.
+2. **Gradient Descent**: We optimize model parameters through gradient descent and evaluate training and testing errors.
+
+**Regularization Parameter (λ) Analysis**:
+
+- We analyze the effect of various λ values on training and testing errors.
 
 
-<img src="images/rbf.png" width="400"/>
+For the firat function, after iterating for different values of Lambda, we calculate the train and test loss for each, and plot the risk regarding to Lambda:
+
+
+<img src="images/4.png" width="400"/>
+
+
+We do the same thing for the second function:
+
+
+<img src="images/5-2.png" width="400"/>
+
+
+After visualizing the models, we see that we get the same results. The train error decreases and the test error increases as the value of Lambda decreases.
+
+
 
