@@ -83,3 +83,21 @@ We can visualize the binary classification results, including the decision bound
 <img src="images/6.png" width="400"/>
 
 
+## 5- Linear Perceptron using SGD
+
+In this project we implement a linear perceptron using stochastic gradient descent (SGD). The dataset contains feature vectors x and corresponding labels y∈{−1,1}. 
+
+
+Visualizing the linear decision boundary on the 2D feature data:
+
+<img src="images/7.png" width="400"/>
+
+
+Displaying the evolution of binary classification error and perceptron error over time, starting from random initialization until convergence:
+
+<img src="images/8.png" width="400"/>
+
+We also analyze how the convergence behavior changes as you vary the step size η.
+
+
+
