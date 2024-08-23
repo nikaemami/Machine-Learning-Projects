@@ -3,7 +3,9 @@ Projects from the Machine Learning course, covering key algorithms and technique
 
 ##  1- Junction Tree algorithm (JTA) for a Markov chain with binary variables
 
-This MATLAB code computes the pairwise marginal probability distributions for a Markov chain with binary variables.
+We have a Markov chain as below:
+<img src="images/1.png" width="600"/>
+The probability distribution implied by this undirected graph is: p(x1, ..., x5) = 1/Z ψ(x1,x2)ψ(x2,x3)ψ(x3,x4)ψ(x4,x5). In this project we write an implementation of the junction tree algorithm that computes all the pairwise marginals p(xi, xi+1) for such a Markov chain for any number of variables n and any initialization of the clique potential functions.
 
 ### Input
 
@@ -33,6 +35,18 @@ In this project, we evaluated polynomial regression models with degrees ranging 
 
 
 We observe how increasing the degree impacts the model's performanc. We can see the change in risk when moving from a polynomial degree of 3 to 4:
+
+
+For D = 3:
+
+
+<img src="images/2.png" width="400"/>
+
+
+For D = 4:
+
+
+<img src="images/3.png" width="400"/>
 
 ## 3- Regularized Linear Regression
 
