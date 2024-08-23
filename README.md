@@ -73,3 +73,13 @@ We do the same thing for the second function:
 
 
 After visualizing the models, we see that we get the same results. The train error decreases and the test error increases as the value of Lambda decreases.
+
+
+## 4- Logistic Regression for Binary Classification
+
+In this project, we perform binary classification using logistic regression on a dataset and monitor the convergence through empirical risk. We define parameters such as tolerance, step_size, and max_iterations for training the logistic regression model.
+
+We can visualize the binary classification results, including the decision boundary and data points by projecting 3D data to 2D as below:
+<img src="images/6.png" width="400"/>
+
+
