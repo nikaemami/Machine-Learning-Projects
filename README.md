@@ -58,10 +58,18 @@ In this project, we implement ridge regression using two methods:
 **Regularization Parameter (λ) Analysis**:
 
 - We analyze the effect of various λ values on training and testing errors.
-- We plot training and testing errors against \( \frac{1}{\lambda} \) to visualize the impact of regularization on model performance.
 
-**Error Analysis and Visualization**:
 
-- We compare the results from direct computation and gradient descent.
-- We visualize errors across different λ values to identify the optimal regularization parameter.
+For the firat function, after iterating for different values of Lambda, we calculate the train and test loss for each, and plot the risk regarding to Lambda:
 
+
+<img src="images/4.png" width="400"/>
+
+
+We do the same thing for the second function:
+
+
+<img src="images/5-2.png" width="400"/>
+
+
+After visualizing the models, we see that we get the same results. The train error decreases and the test error increases as the value of Lambda decreases.
