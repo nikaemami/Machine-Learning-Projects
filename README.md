@@ -100,4 +100,27 @@ Displaying the evolution of binary classification error and perceptron error ove
 We also analyze how the convergence behavior changes as you vary the step size η.
 
 
+## 6- Object Recognition Using Support Vector Machine (SVM)
+
+In this project, the task is to build a Support Vector Machine (SVM) to classify data and use cross-validation to find the best SVM kernel and regularization value. We experiment with different polynomial orders (1 to 5), RBF kernels with varying sigma values, and different values of the regularization parameter C in the SVM.
+
+We can see the errors for 3 different kernels as below:
+
+
+Linear kernel:
+
+
+<img src="images/linear.png" width="400"/>
+
+
+Polynomial kernel:
+
+
+<img src="images/polynomial.png" width="400"/>
+
+
+RBF kernel:
+
+
+<img src="images/rbf.png" width="400"/>
 
